@@ -1,15 +1,13 @@
-
 window.addEventListener('DOMContentLoaded', (event) => {
     getVisitorCount();
 });
 
-const apiEndpoint = 'YOUR_API_GATEWAY_URL_HERE'; 
+const apiEndpoint = "https://a1lic7tac3.execute-api.us-east-2.amazonaws.com/counter"; 
 
 function getVisitorCount() {
     fetch(apiEndpoint)
         .then(response => response.json())
         .then(data => {
-            // Adjust data.count based on how your Lambda function returns the JSON
             document.getElementById('counter').innerText = data.count;
         })
         .catch(error => {

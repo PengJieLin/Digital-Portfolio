@@ -1,3 +1,5 @@
+# Purpose: Remote State Mapping
+
 terraform {
   backend "s3" {
     bucket         = "pjl-terraform-states" 

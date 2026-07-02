@@ -1,3 +1,5 @@
+# Purpose: AWS Pluggins Config
+
 terraform {
   required_providers {
     aws = {
@@ -8,5 +10,5 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2" # Region for your website resources
+  region = "us-east-2"
 }

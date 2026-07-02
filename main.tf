@@ -177,8 +177,7 @@ resource "aws_iam_role" "github_actions" {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
           }
           StringLike = {
-            # Change "your-github-username" and "your-repo-name" to match yours!
-            "token.actions.githubusercontent.com:sub" = "repo:your-github-username/your-repo-name:*"
+            "token.actions.githubusercontent.com:sub" = "repo:PengJieLin/Digital-Portfolio:*"
           }
         }
       }

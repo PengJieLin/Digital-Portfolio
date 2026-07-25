@@ -1,136 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Cloud Computing Specialist</title>
+    <title>Peng Jie Lin | Cloud & Software Engineering Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="container">
-    <header>
-        <h1>Peng Jie Lin</h1>
-        <div class="contact-info">
-            <a href="https://github.com/PengJieLin" target="_blank">github.com/PengJieLin</a> | 
-            <a href="https://www.linkedin.com/in/peng-jie-lin-243ba0210/" target="_blank">LinkedIn Profile</a> |
-            <a href="mailto:pengjie.lin@georgebrown.ca">pengjie.lin@georgebrown.ca</a>
-        </div>
-    </header>
-
-    <section>
-        <h2>Professional Summary</h2>
-        <p>Adaptable UofT Computer Science Specialist graduate and current Postgraduate Cloud Computing student at George Brown Polytechnic with a proven track record of rapid upskilling and technical versatility. A dually certified AWS and Azure professional experienced in managing advanced infrastructure, optimizing databases, and resolving application defects in fast-paced environments. Combines strong analytical troubleshooting with the agility to master new enterprise tools and methodologies quickly.</p>
-    </section>
-
-    <section>
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skills-category">
-                <strong>Cloud & Infrastructure:</strong> AWS, Azure, Windows Servers & Infrastructure, Advanced Linux, Network Fundamentals
-            </div>
-            <div class="skills-category">
-                <strong>Tools & DevOps:</strong> GitHub, GitHub Actions, Terraform, PowerShell, Microsoft 365
-            </div>
-            <div class="skills-category">
-                <strong>Programming & Databases:</strong> Python, Java, Go, SQL (Postgres, MariaDB), JavaScript, PHP, Shell Scripting
-            </div>
-            <div class="skills-category">
-                <strong>Core Competencies:</strong> Rapid Upskilling, Agile/Scrum Methodologies, Root-Cause Analysis, Technical Documentation, Cross-Functional Collaboration
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <div class="education">
-            <div class="meta-line">
-                <h3>Postgraduate Cloud Computing Technologies</h3>
-                <span>Expected May 2027</span>
-            </div>
-            <strong>George Brown Polytechnic</strong>
-            <ul>
-                <li>Key Coursework: Windows Infrastructure, Advanced Linux, Microsoft 365, Network Fundamentals, Azure, AWS.</li>
-                <li>Gained comprehensive hands-on training in enterprise-level operating systems, IT infrastructure, and data management.</li>
-                <li>Developed strong fundamentals in automation scripting and proactive system troubleshooting.</li>
+    <!-- Sticky Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#profile" class="nav-brand">Peng Jie Lin</a>
+            <ul class="nav-links">
+                <li><a href="#profile" class="nav-link active">Profile</a></li>
+                <li><a href="#skills" class="nav-link">Skills & Resume</a></li>
+                <li><a href="#projects" class="nav-link">Work Samples</a></li>
+                <li><a href="#education" class="nav-link">Education & Certifications</a></li>
             </ul>
         </div>
+    </nav>
 
-        <div class="education">
-            <div class="meta-line">
-                <h3>Bachelor of Computer Science Specialist</h3>
-                <span>Sept 2019 – Sept 2024</span>
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <!-- 1. PROFILE SECTION -->
+        <section id="profile" class="portfolio-card profile-card">
+            <div class="profile-header">
+                <div class="avatar-badge">PJL</div>
+                <div class="profile-title-group">
+                    <h1>Peng Jie Lin</h1>
+                    <p class="subtitle">Cloud Computing Specialist & Computer Science Graduate</p>
+                    <div class="badge-row">
+                        <span class="badge badge-aws">AWS Certified Practitioner</span>
+                        <span class="badge badge-azure">Azure Certified AZ-900</span>
+                        <span class="badge badge-gbc">George Brown Postgraduate</span>
+                        <span class="badge badge-uoft">UofT CS Specialist</span>
+                    </div>
+                </div>
             </div>
-            <strong>University of Toronto</strong>
-            <ul>
-                <li>Honors: Dean’s List for Academic Excellence, Scholars Award Entrance Scholarship.</li>
-                <li>Key Coursework: Operating Systems, Database Systems, Software Engineering, Agile Methodologies.</li>
-            </ul>
-        </div>
-    </section>
 
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li><strong>AWS Certified Cloud Practitioner (CLF-C02)</strong> | 2026</li>
-            <li><strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong> | 2026</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Technical Projects</h2>
-        <div class="project">
-            <div class="meta-line">
-                <h3>TFT Calculator | Go, AWS, Terraform</h3>
-                <span>Jan 2026 – Ongoing</span>
+            <div class="bio-content">
+                <h2>Professional Summary & Bio</h2>
+                <p>
+                    Adaptable University of Toronto Computer Science Specialist graduate and current Postgraduate Cloud 
+                    Computing student at George Brown Polytechnic with a proven track record of rapid upskilling and technical versatility. 
+                    Dually certified in AWS and Azure, specializing in serverless cloud architecture, Infrastructure as Code (IaC) with Terraform, 
+                    CI/CD automation via GitHub Actions, and production application defect resolution in fast-paced enterprise environments.
+                </p>
+                <div class="contact-bar">
+                    <a href="https://github.com/PengJieLin" target="_blank" class="contact-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        GitHub Profile
+                    </a>
+                    <a href="https://www.linkedin.com/in/peng-jie-lin-243ba0210/" target="_blank" class="contact-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn Profile
+                    </a>
+                    <a href="mailto:pengjie.lin@georgebrown.ca" class="contact-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        pengjie.lin@georgebrown.ca
+                    </a>
+                </div>
             </div>
-            <a href="https://github.com/PengJieLin/TFT-Calc" target="_blank">github.com/PengJieLin/TFT-Calc</a>
-            <ul>
-                <li>Developed a high-performance backend engine in Go utilizing a recursive backtracking algorithm.</li>
-                <li>Architected serverless infrastructure on AWS (Lambda, S3) using Terraform for Infrastructure as Code.</li>
-                <li>Optimized execution performance by implementing global state caching for data ingested from S3.</li>
-                <li>Automated the deployment lifecycle (Build/Test/Deploy) using GitHub Actions CI/CD pipelines.</li>
-            </ul>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Relevant Experience</h2>
-        <div class="job">
-            <div class="meta-line">
-                <h3>AI Developer (Contract)</h3>
-                <span>Mar 2025 – Apr 2025</span>
+        <!-- 2. SKILLS (RESUME) SECTION -->
+        <section id="skills" class="portfolio-card">
+            <div class="section-header">
+                <h2>Technical Skills & Resume Overview</h2>
             </div>
-            <strong>Outlier AI</strong>
-            <ul>
-                <li>Executed complex testing scenarios to validate system behavioral consistency and functional performance.</li>
-                <li>Monitored application outputs to identify service inconsistencies, log defects, and pinpoint system failures.</li>
-                <li>Provided detailed technical feedback and structured corrections to improve system reliability and operational accuracy.</li>
-            </ul>
-        </div>
 
-        <div class="job">
-            <div class="meta-line">
-                <h3>Application Developer</h3>
-                <span>Sept 2023 – Apr 2024</span>
+            <div class="skills-categories">
+                <div class="skills-card">
+                    <div class="skills-card-header">
+                        <span class="icon">☁️</span>
+                        <h3>Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="tag-cloud">
+                        <span class="tech-tag">AWS (S3, Lambda, API Gateway, DynamoDB, CloudFront, IAM)</span>
+                        <span class="tech-tag">Microsoft Azure</span>
+                        <span class="tech-tag">Windows Server Administration</span>
+                        <span class="tech-tag">Advanced Linux (RHEL, Ubuntu)</span>
+                        <span class="tech-tag">Networking Fundamentals (DNS, TCP/IP, VPC)</span>
+                    </div>
+                </div>
+
+                <div class="skills-card">
+                    <div class="skills-card-header">
+                        <span class="icon">🛠️</span>
+                        <h3>DevOps & Automation</h3>
+                    </div>
+                    <div class="tag-cloud">
+                        <span class="tech-tag">Terraform (IaC)</span>
+                        <span class="tech-tag">GitHub Actions (CI/CD)</span>
+                        <span class="tech-tag">OpenID Connect (OIDC) Federation</span>
+                        <span class="tech-tag">PowerShell Scripting</span>
+                        <span class="tech-tag">Bash / Shell Scripting</span>
+                        <span class="tech-tag">Microsoft 365 Admin</span>
+                    </div>
+                </div>
+
+                <div class="skills-card">
+                    <div class="skills-card-header">
+                        <span class="icon">💻</span>
+                        <h3>Programming & Databases</h3>
+                    </div>
+                    <div class="tag-cloud">
+                        <span class="tech-tag">Python 3.12</span>
+                        <span class="tech-tag">Go (Golang)</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaScript (ES6+)</span>
+                        <span class="tech-tag">SQL (PostgreSQL, MariaDB, MySQL)</span>
+                        <span class="tech-tag">HTML5 / CSS3</span>
+                        <span class="tech-tag">PHP</span>
+                    </div>
+                </div>
+
+                <div class="skills-card">
+                    <div class="skills-card-header">
+                        <span class="icon">⚡</span>
+                        <h3>Core Competencies</h3>
+                    </div>
+                    <div class="tag-cloud">
+                        <span class="tech-tag">Rapid Upskilling & Adaptability</span>
+                        <span class="tech-tag">Agile / Scrum Methodologies</span>
+                        <span class="tech-tag">Root-Cause Analysis & Troubleshooting</span>
+                        <span class="tech-tag">Technical Documentation</span>
+                        <span class="tech-tag">SQL Query Optimization</span>
+                    </div>
+                </div>
             </div>
-            <strong>University of Toronto</strong>
-            <ul>
-                <li>Maintained and optimized production web applications to ensure high system reliability and operational uptime.</li>
-                <li>Diagnosed and resolved application bugs through structured troubleshooting, issue investigation, and patch deployment.</li>
-                <li>Documented system architectures and step-by-step operational procedures to streamline future internal support requests.</li>
-                <li>Communicated with stakeholders to gather requirements, manage expectations, and deliver quality solutions on schedule.</li>
-                <li>Optimized backend SQL queries to improve data processing efficiency and reduce system database latency.</li>
-            </ul>
+        </section>
+
+        <!-- 3. WORK SAMPLES & PROJECTS SECTION -->
+        <section id="projects" class="portfolio-card">
+            <h2>Work Samples & Technical Projects</h2>
+            <p class="section-intro">Practical applications built to demonstrate cloud architecture, serverless computing, and software engineering principles.</p>
+
+            <div class="work-samples-grid">
+
+                <!-- Work Sample 1 -->
+                <div class="work-sample-card">
+                    <div class="sample-badge">Cloud Architecture & IaC</div>
+                    <h3>Serverless AWS Digital Portfolio & Visitor Counter</h3>
+                    <p class="sample-description">
+                        Architected an end-to-end serverless portfolio website hosted on AWS S3 and distributed globally via CloudFront CDN. 
+                        Integrated a microservice backend utilizing AWS Lambda and DynamoDB for atomic page view counting.
+                    </p>
+                    <ul class="sample-highlights">
+                        <li>Automated full infrastructure provisioning using <strong>Terraform</strong> IaC.</li>
+                        <li>Configured <strong>CloudFront Origin Access Control (OAC)</strong> for strict S3 security.</li>
+                        <li>Implemented passwordless <strong>GitHub Actions OIDC</strong> authentication for CI/CD deployments.</li>
+                    </ul>
+                    <div class="sample-tech-stack">
+                        <span>Terraform</span><span>AWS Lambda</span><span>DynamoDB</span><span>CloudFront</span><span>GitHub Actions</span>
+                    </div>
+                    <div class="sample-links">
+                        <a href="https://github.com/PengJieLin/Digital-Portfolio" target="_blank" class="btn-sample">View Repository on GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Work Sample 2 -->
+                <div class="work-sample-card">
+                    <div class="sample-badge">High-Performance Backend</div>
+                    <h3>TFT Calculator Engine | Go, AWS & Terraform</h3>
+                    <p class="sample-description">
+                        Developed a high-performance backend computation engine in Go utilizing recursive backtracking algorithms for strategic game outcome optimization.
+                    </p>
+                    <ul class="sample-highlights">
+                        <li>Built serverless cloud backend infrastructure on AWS Lambda and S3 using Terraform.</li>
+                        <li>Optimized execution performance via global state caching for data ingested from S3.</li>
+                        <li>Automated testing and deployment lifecycle with GitHub Actions CI/CD.</li>
+                    </ul>
+                    <div class="sample-tech-stack">
+                        <span>Go (Golang)</span><span>AWS Lambda</span><span>Amazon S3</span><span>Terraform</span><span>CI/CD</span>
+                    </div>
+                    <div class="sample-links">
+                        <a href="https://github.com/PengJieLin/TFT-Calc" target="_blank" class="btn-sample">View Repository on GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Work Sample 3 -->
+                <div class="work-sample-card">
+                    <div class="sample-badge">Enterprise Application Engineering</div>
+                    <h3>Production Web Application & Database Optimization</h3>
+                    <p class="sample-description">
+                        Maintained and optimized production web applications for the University of Toronto, ensuring high system availability, security, and low query latency.
+                    </p>
+                    <ul class="sample-highlights">
+                        <li>Diagnosed and patched application defects through structured root-cause investigation.</li>
+                        <li>Optimized complex SQL queries to reduce backend database latency and processing overhead.</li>
+                        <li>Authored technical documentation for system architecture and support procedures.</li>
+                    </ul>
+                    <div class="sample-tech-stack">
+                        <span>SQL</span><span>Python</span><span>JavaScript</span><span>System Troubleshooting</span><span>Agile</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. EDUCATION & CERTIFICATIONS SECTION -->
+        <section id="education" class="portfolio-card">
+            <h2>Education & Certifications</h2>
+
+            <div class="timeline">
+
+                <!-- Education Entry 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Expected May 2027</span>
+                        <span class="timeline-status">In Progress</span>
+                    </div>
+                    <h3>Postgraduate Cloud Computing Technologies</h3>
+                    <strong class="institution">George Brown Polytechnic</strong>
+                    <ul class="timeline-details">
+                        <li><strong>Specialized Coursework:</strong> AWS Cloud Architecture, Microsoft Azure Infrastructure, Windows Server Administration, Advanced Linux, Networking Fundamentals, Microsoft 365 Enterprise.</li>
+                        <li><strong>Practical Focus:</strong> Hands-on experience in cloud security, automated infrastructure provisioning, and enterprise virtualization.</li>
+                    </ul>
+                </div>
+
+                <!-- Education Entry 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Sept 2019 – Sept 2024</span>
+                        <span class="timeline-status completed">Graduated</span>
+                    </div>
+                    <h3>Bachelor of Computer Science Specialist</h3>
+                    <strong class="institution">University of Toronto</strong>
+                    <ul class="timeline-details">
+                        <li><strong>Core Coursework:</strong> Operating Systems, Database Systems, Software Engineering, Algorithm Analysis, Agile Methodologies.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Professional Certifications Grid -->
+            <div class="certifications-block">
+                <h3>Industry Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">☁️</div>
+                        <div class="cert-info">
+                            <h4>AWS Certified Cloud Practitioner (CLF-C02)</h4>
+                            <p>Amazon Web Services | Issued 2026</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🔷</div>
+                        <div class="cert-info">
+                            <h4>Microsoft Certified: Azure Fundamentals (AZ-900)</h4>
+                            <p>Microsoft | Issued 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Serverless Visitor Counter Component -->
+        <div id="counter-container">
+            <div class="counter-badge">
+                <span class="pulse-dot"></span>
+                <p>Digital Portfolio Views: <span id="counter">0</span></p>
+            </div>
         </div>
-    </section>
 
-    <!-- Step 7: Visitor Counter View -->
-    <div id="counter-container">
-        <p>This page has been viewed <span id="counter">0</span> times.</p>
-    </div>
-</div>
+    </main>
 
-<script src="app.js"></script>
+    <footer class="footer">
+        <p>&copy; 2026 Peng Jie Lin. Built with HTML5, CSS3, Vanilla JS, AWS Lambda, DynamoDB, S3 & Terraform.</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
+
 </html>

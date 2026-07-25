@@ -1,4 +1,4 @@
-# Purpose: Outputs Website URL and APIs
+# Runtime infrastructure endpoints and CI/CD authentication identifiers
 
 output "website_url" {
   description = "Endpoint URL for the static website"

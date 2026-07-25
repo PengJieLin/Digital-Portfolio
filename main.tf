@@ -1,10 +1,10 @@
-# Purpose: Provision S3 frontend and setup counter API
+# --- 1. S3 Storage & Static Website Configuration ---
 
 resource "aws_s3_bucket" "resume_bucket" {
-  bucket = "pjl-static-resume" # Must be globally unique
+  bucket = "pjl-static-resume" # Must be globally unique across AWS
 }
 
-//Resume & S3 Setup
+# Configure bucket for static website hosting with index and error routing
 resource "aws_s3_bucket_website_configuration" "resume_site" {
   bucket = aws_s3_bucket.resume_bucket.id
 
@@ -45,7 +45,8 @@ resource "aws_s3_bucket_policy" "public_read_policy" {
   })
 }
 
-# DynamoDB Table to store the visitor count
+# --- 2. DynamoDB Storage (Visitor Counter Table) ---
+# Pay-per-request on-demand capacity table for atomic visitor counter storage
 resource "aws_dynamodb_table" "visitor_counter" {
   name         = "visitor-counter-table"
   billing_mode = "PAY_PER_REQUEST"
@@ -57,7 +58,8 @@ resource "aws_dynamodb_table" "visitor_counter" {
   }
 }
 
-# IAM Role for Lambda
+# --- 3. IAM Execution Role & Least-Privilege Policy for Lambda ---
+# Execution role assumed by AWS Lambda compute service via STS
 resource "aws_iam_role" "lambda_role" {
   name = "resume_counter_lambda_role"
 
@@ -96,7 +98,8 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
   policy_arn = aws_iam_policy.lambda_policy.arn
 }
 
-# AWS Lambda Function
+# --- 4. AWS Lambda Serverless Compute Function ---
+# Deploys Python runtime execution package with DynamoDB environment configuration
 resource "aws_lambda_function" "counter_lambda" {
   filename         = "lambda_function.zip" # You'll create this zip file locally
   function_name    = "resume-visitor-counter"
@@ -111,7 +114,7 @@ resource "aws_lambda_function" "counter_lambda" {
   }
 }
 
-# HTTP API Gateway
+# --- 5. HTTP API Gateway v2 & Lambda Proxy Integration ---
 
 // Setup gateway and CORS
 resource "aws_apigatewayv2_api" "http_api" {
@@ -155,7 +158,8 @@ resource "aws_lambda_permission" "api_gw_lambda" {
 }
 
 
-// Link Github to AWS
+# --- 6. GitHub Actions OpenID Connect (OIDC) & CI/CD Federation ---
+# Passwordless identity federation allowing automated CI/CD workflow deployments
 resource "aws_iam_openid_connect_provider" "github" {
   url             = "https://token.actions.githubusercontent.com"
   client_id_list  = ["sts.amazonaws.com"]
@@ -190,7 +194,8 @@ resource "aws_iam_role_policy_attachment" "github_admin" {
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
-# Create CloudFront Origin Access Control
+# --- 7. CloudFront Global CDN & Secure Origin Access Control (OAC) ---
+# Global content delivery network with SigV4 request signing for secure S3 origin access
 resource "aws_cloudfront_origin_access_control" "s3_oac" {
   name                              = "s3_oac"
   description                       = "OAC for secure S3 website access"
